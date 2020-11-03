@@ -1,0 +1,23 @@
+A basic object oriented design was chosen for this project. The reason was the relationship between the various entities (user, credit card, and verifier/bank) mapped well into classes and objects.
+
+There are three main classes.
+
+The User class handles basic user information, including the name and has a reference to a credit card instance.
+
+The CreditCard class handles all the internals of limits, balance, and modifying the balance
+
+The Bank class keeps track of the users and handles the actual charging and display of the transaction summary.
+
+The project is written in Javascript for the Node server chosen for it's easy to use file I/O and the availability of additional development modules
+
+To install dependencies:
+	npm install
+	
+To run the project:
+	npm start [transactions_file_name] OR
+	npm start < [transactions_file_name] OR
+	node index.js [transactions_file_name] OR
+	node index.js < [transactions_file_name]
+
+To run the tests:
+	npm test
